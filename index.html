@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Music Streaming Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">MusicStream</span>
+      </div>
+      <div class="header-right">
+        <span class="tag">DAA Project</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT COLUMN: SONG LIBRARY -->
+      <section class="panel">
+        <h2>Song Library</h2>
+        <p class="subtitle">
+          Choose a song and add it to the request queue or play immediately.
+        </p>
+
+        <div class="card">
+          <label for="songSelect" class="field-label">Select Song</label>
+          <select id="songSelect" class="song-select"></select>
+
+          <div class="button-row">
+            <button id="addToQueueBtn" class="btn primary">Add to Request Queue</button>
+            <button id="playNowBtn" class="btn ghost">Play Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Song Details</h3>
+          <p><strong>Title:</strong> <span id="songDetailsTitle">-</span></p>
+          <p><strong>Artist:</strong> <span id="songDetailsArtist">-</span></p>
+          <p><strong>Genre:</strong> <span id="songDetailsGenre">-</span></p>
+        </div>
+      </section>
+
+      <!-- MIDDLE COLUMN: NOW PLAYING + QUEUE -->
+      <section class="panel">
+        <h2>Now Playing</h2>
+
+        <div class="card now-playing">
+          <div class="now-playing-main">
+            <div class="now-playing-info">
+              <div class="badge">LIVE</div>
+              <h3 id="nowPlayingTitle">No song is playing</h3>
+              <p id="nowPlayingArtist" class="muted">Select a song to start playback.</p>
+            </div>
+
+            <div class="player-controls">
+              <button id="togglePlayBtn" class="btn circle primary small" title="Play / Pause">
+                ▶
+              </button>
+              <button id="stopBtn" class="btn circle ghost small" title="Stop">
+                ■
+              </button>
+            </div>
+          </div>
+
+          <div class="progress-row">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progressBar" min="0" max="100" value="0" />
+            <span id="duration">0:00</span>
+          </div>
+
+          <div class="now-playing-meta">
+            <span><strong>Genre:</strong> <span id="nowPlayingGenre">-</span></span>
+            <span><strong>Plays:</strong> <span id="playCount">0</span></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-row">
+            <h3>Request Queue (Queue)</h3>
+            <span class="chip"><span id="queueSize">0</span> in queue</span>
+          </div>
+
+          <ul id="queueList" class="list"></ul>
+
+          <div class="button-row spaced-top">
+            <button id="serveNextBtn" class="btn primary">Serve Next Request</button>
+            <button id="clearQueueBtn" class="btn danger ghost">Clear Queue</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: RECENT PLAYS + GENRE STATS -->
+      <section class="panel">
+        <h2>Playback Insights</h2>
+
+        <div class="card">
+          <div class="card-header-row">
+            <h3>Recent Plays (Stack)</h3>
+            <span class="chip"><span id="stackSize">0</span> played</span>
+          </div>
+          <ol id="stackList" class="list"></ol>
+          <p class="hint-text">Tip: Click any recent song to play it again.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header-row">
+            <h3>Top Artists (Hash Table)</h3>
+          </div>
+          <ul id="artistStats" class="list small"></ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header-row">
+            <h3>Genre Frequency Plot</h3>
+          </div>
+          <div class="genre-chart" id="genreChart"></div>
+          <div class="genre-legend" id="genreLegend"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Implemented with <strong>Queue</strong>, <strong>Stack</strong>,
+        <strong>Hash Table</strong> &amp; <strong>Frequency Plot</strong> in JavaScript.
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
