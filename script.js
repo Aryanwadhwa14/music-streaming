@@ -3,14 +3,11 @@
 // Song library: title, artist, genre, audio file path
 // Make sure the "audio" values match the actual .mp3 names in your /audio folder
 const songs = [
-  { id: 1, title: "Midnight Drive", artist: "Luna Waves", genre: "Lo-fi", audio: "audio/Jatta-ka-chora" },
-  { id: 2, title: "Neon Skies", artist: "Pulse City", genre: "EDM", audio: "audio/mitwa.mp3" },
-  { id: 3, title: "Coffee Shop Chill", artist: "LoKey", genre: "Lo-fi", audio: "audio/No-Entry.mp3" },
-  { id: 4, title: "Sunrise Over You", artist: "Aurora Heart", genre: "Pop", audio: "audio/Uncha-Lamba.mp3" },
-  { id: 5, title: "Binary Dreams", artist: "CodeRun", genre: "Electronic", audio: "audio/Yaar-batere.mp3" },
-  { id: 6, title: "Blues in C", artist: "Old Town Trio", genre: "Blues", audio: "audio/blues-in-c.mp3" },
-  { id: 7, title: "Rainy Window", artist: "Luna Waves", genre: "Lo-fi", audio: "audio/rainy-window.mp3" },
-  { id: 8, title: "Fire & Ice", artist: "Pulse City", genre: "EDM", audio: "audio/fire-and-ice.mp3" },
+  { id: 1, title: "Jatta ka chora", artist: "Aryan Taneja", genre: "Haryanvi music", audio: "audio/Jatta-ka-chora.mp3" },
+  { id: 2, title: "Mitwa", artist: "Shankar Ehsan Loy", genre: "bollywood", audio: "audio/mitwa.mp3" },
+  { id: 3, title: "No entry", artist: "Sonu Nigam", genre: "bollywood", audio: "audio/No-Entry.mp3" },
+  { id: 4, title: "Uncha Lamba Kad", artist: "Welcome", genre: "bollywood", audio: "audio/Uncha-Lamba.mp3" },
+  { id: 5, title: "Yaar Batere", artist: "Honey Singh", genre: "Rap music", audio: "audio/Yaar-batere.mp3" },  
 ];
 
 // ---------- QUEUE IMPLEMENTATION (REQUEST QUEUE) ----------
